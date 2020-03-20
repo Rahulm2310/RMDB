@@ -1,54 +1,67 @@
+<!-- api key 9b48ef39 -->
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>
-                RMDB
-            </title>
+<html>
+  <head>
+    <title>
+      rmdb
+    </title>
 
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-            <link rel="stylesheet" href="rmdb.css">
-        </head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="rmdb.css" />
+  </head>
 
-        <body>
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                  <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
-                      <img id="rmdbbrand" alt="Brand" src="rmdb2.png">
-                    </a>
-                  </div>
-                </div>
-              </nav>
+  <body>
+    <main class="overlay">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+              <img id="rmdbbrand" alt="Brand" src="rmdb.png" />
+            </a>
+          </div>
+        </div>
+      </nav>
 
-              <div class="container">
-                  <div class="jumbotron">
-                    <div id="jumboimage">
-                      <img src="rmdb.png">
-                    </div>
-                      <h3 class="text-center">Search for any Movie</h3>
-                        <form id="searchform">
-                            <input type="text" class="form-control" id="searchText" placeholder="Search your movies here">
-                            <button id="submitbtn" class="btn btn-success btn-md">Search</button>
-                        </form>
-                  </div>
-              </div>
+      <div class="container">
+        <h3 class="text-center">Search for any Movie</h3>
+        <form id="searchForm">
+          <input
+            type="text"
+            id="searchText"
+            placeholder="Search your movies here"
+            autocomplete="false"
+          />
+          <button id="submitbtn" class="btn btn-warning btn-md">
+            Search
+          </button>
+        </form>
+      </div>
 
-              <div class="container">
-                  <div id="movies" class="row">
+      <div class="container">
+        <div id="movies" class="row"></div>
+      </div>
 
-                  </div>
-              </div>
+      <footer>
+        <p>RMDB ~ Developed & Maintained by Rahul Mohata</p>
+      </footer>
+    </main>
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
 
-             
+    <script
+      src="https://unpkg.com/axios/dist/axios.min.js"
+      type="text/javascript"
+    ></script>
 
-                    <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
-
-        <script src="https://unpkg.com/axios/dist/axios.min.js" type="text/javascript"></script>
-
-        <script src="rmdb.js" type="text/javascript"></script>
-        </body>
-    </html>
+    <script src="rmdb.js" type="text/javascript"></script>
+  </body>
+</html>
