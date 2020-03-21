@@ -5,6 +5,8 @@ body {
   margin: 0;
   padding: 0;
   background-attachment: fixed;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .overlay {
@@ -30,12 +32,12 @@ body {
   background-color: black;
   overflow: hidden;
   margin: 0;
-  padding: 5px;
+  /* padding: 5px; */
   border-bottom: 1px solid rgb(235, 235, 76);
   display: flex;
   justify-content: center;
-  align-items: center;
   z-index: 500;
+  height: 65px;
 }
 
 .navbar-brand {
@@ -50,7 +52,7 @@ body {
 
 h3.text-center {
   color: white;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 #searchForm {
@@ -76,6 +78,7 @@ h3.text-center {
   color: black;
   outline: none;
   font-size: 18px;
+  font-weight: 600;
 }
 
 #submitbtn:hover {
@@ -94,7 +97,7 @@ h3.text-center {
 }
 
 #movies .col-md-4 .well {
-  height: 370px;
+  height: 390px;
 }
 
 #movies .col-md-4 img {
@@ -111,25 +114,57 @@ h3.text-center {
   color: white;
 }
 
-@media (max-width: 960px) {
+#movie .row {
+  margin: 0px;
+}
+
+footer {
+  background-color: rgba(15, 15, 15, 0.863);
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+footer p {
+  font-size: 17px;
+  color: rgba(182, 182, 67, 0.897);
+}
+
+
+
+@media screen and (min-width: 721px) and (max-width: 991px) and (orientation: landscape) {
+  .movies-container {
+    width: 55%;
+  }
+  .movie-container {
+    width: 90%;
+  }
+  .form-container {
+    width: 80%;
+  }
+
   #movie .row {
     display: flex;
     align-items: center;
   }
 
   #movies .col-md-4 .well {
-    height: 390px;
+    height: 500px;
   }
 
   #movies .col-md-4 img {
-    height: 240px;
+    height: 350px;
+  }
+
+  .well h5 {
+    font-size: 18px;
   }
 }
 
-@media (max-width: 770px) {
-  h3.text-center {
-    font-size: 25px;
-  }
+@media screen and (min-width: 501px) and (max-width: 720px) and (orientation: landscape) {
   #searchText {
     width: 100%;
     padding: 5px;
@@ -157,49 +192,98 @@ h3.text-center {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-device-width: 500px) and (orientation: portrait) {
+  .navbar-header {
+    height: 140px;
+    overflow: hidden;
+    border-bottom: 7px solid rgb(235, 235, 76);
+  }
+  #rmdbbrand {
+    height: 140px;
+    width: 400px;
+  }
+  .movies-container {
+    width: 70%;
+  }
+  .form-container {
+    margin-top: 150px;
+    width: 90%;
+  }
+
   h3.text-center {
-    font-size: 25px;
+    font-size: 70px;
+    padding: 30px 0px;
   }
   #searchText {
     width: 100%;
-    padding: 5px;
-    font-size: 17px;
+    padding: 10px;
+    font-size: 40px;
+    border-radius: 15px;
   }
 
   #submitbtn {
-    width: 100px;
-    font-size: 15px;
-  }
-
-  a.btn-primary {
-    font-size: 12px;
+    width: 220px;
+    font-size: 40px;
+    border-radius: 10px;
   }
 
   #movies .col-md-4 .well {
-    height: 320px;
-    width: 110%;
+    height: 800px;
   }
 
   #movies .col-md-4 img {
-    height: 170px;
+    height: 500px;
   }
-}
 
-#movie .row {
-  margin: 0px;
-}
+  .well h5 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 30px auto;
+  }
 
-footer {
-  background-color: rgba(15, 15, 15, 0.863);
-  text-align: center;
-  margin: 0;
-  padding: 7px;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-}
+  .well .btn-primary {
+    font-size: 30px;
+    font-weight: 200;
+  }
 
-footer p {
-  color: rgba(182, 182, 67, 0.897);
+  footer p {
+    font-size: 37px;
+    padding: 20px;
+  }
+
+  .movie-container {
+    margin: 120px;
+  }
+
+  .movie-container .row .movie-name {
+    font-size: 60px;
+    padding: 20px;
+  }
+
+  .movie-container .row ul li {
+    font-size: 40px;
+    padding: 20px;
+    font-weight: 100;
+  }
+
+  .movie-container .row .well h3 {
+    font-size: 50px;
+    margin-left: 20px;
+  }
+
+  .movie-container .row .well .movie-plot {
+    font-size: 40px;
+    font-weight: 100;
+    padding: 20px;
+  }
+
+  .movie-container .row .well .movie-container-btns {
+    text-align: center;
+  }
+
+  .movie-container .row .well .movie-container-btns a {
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px auto;
+  }
 }
