@@ -41,7 +41,7 @@ function getMovie() {
             </div>
 
             <div class="row">
-                <div class="well">
+                <div class="well plot-container">
                     <h3>Plot</h3>
                     <p class="movie-plot">${movie.Plot}</p>
                     <hr>
