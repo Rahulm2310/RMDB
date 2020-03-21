@@ -20,12 +20,12 @@ function getMovie() {
       let movie = response;
       let output = `
             <div class="row">
-                <div class="movie-details-image col-md-4 col-sm-5">
+                <div class="movie-details-image col-md-4 col-sm-12">
                     <img src="${movie.Poster}" class="thumbnail">
                 </div>
 
-                <div class="col-md-8 col-sm-7">
-                    <h2>${movie.Title}</h2>
+                <div class="col-md-8 col-sm-12">
+                    <h2 class="movie-name">${movie.Title}</h2>
                     <ul class="list-group">
                         <li class="list-group-item"><strong>Genre:</strong> ${movie.Genre} </li>
                         <li class="list-group-item"><strong>Released:</strong> ${movie.Released} </li>
@@ -43,10 +43,12 @@ function getMovie() {
             <div class="row">
                 <div class="well">
                     <h3>Plot</h3>
-                    ${movie.Plot}
+                    <p class="movie-plot">${movie.Plot}</p>
                     <hr>
-                    <a href="http://imdb.com/title/${movie.imdbID}" target="_blank"  class="btn btn-success btn-md">View IMDB</a>
-                    <a href="index.html" class="btn bnt-default">Back to Search</a>
+                    <div class="movie-container-btns">
+                      <a href="http://imdb.com/title/${movie.imdbID}" target="_blank"  class="btn btn-success btn-md">View IMDB</a>
+                      <a href="index.html" class="btn bnt-default">Back to Search</a>
+                    </div>
                 </div>
             </div>
                 
@@ -71,7 +73,7 @@ function getMovies(searchText) {
       let output = "";
       $.each(movies, function(index, movie) {
         output += `
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                            <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
                                 <div class="well text-center">
                                     <img src="${movie.Poster}"> 
                                     <h5>${movie.Title}</h5>
@@ -87,3 +89,4 @@ function getMovies(searchText) {
       console.log(err);
     });
 }
+
